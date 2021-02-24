@@ -442,6 +442,7 @@ export class Multiselect extends React.Component {
 
   toggelOptionList() {
     this.setState({
+      inputValue: "",
       toggleOptionsList: !this.state.toggleOptionsList,
       highlightOption: this.props.avoidHighlightFirstOption ? -1 : 0
     });
