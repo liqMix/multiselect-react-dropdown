@@ -106,6 +106,8 @@ export class Multiselect extends React.Component {
   }
 
   componentWillUnmount() {
+    if(this.optionTimeout)
+      clearTimeout(this.optionTimeout);
     this.searchWrapper.current.removeEventListener('click', this.listenerCallback);
   }
 
